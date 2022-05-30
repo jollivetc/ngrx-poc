@@ -9,6 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { ContactsListComponent } from './contact/contacts-list/contacts-list.component';
 import { ContactComponent } from './contact/contact/contact.component';
+import * as fromState from './contact/state/reducers';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,9 @@ import { ContactComponent } from './contact/contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(fromState.reducers),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
