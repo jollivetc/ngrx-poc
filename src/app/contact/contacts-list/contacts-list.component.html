@@ -1,1 +1,5 @@
-<p>contacts-list works!</p>
+<ul>
+  <li *ngFor="let c of contacts$ | async" (click)="onClick(c.id)">
+    {{c.firstname}} {{c.lastname}}
+  </li>
+</ul>
