@@ -7,10 +7,14 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { ContactsListComponent } from './contact/contacts-list/contacts-list.component';
+import { ContactComponent } from './contact/contact/contact.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactsListComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
