@@ -26,7 +26,7 @@ export class ContactService {
             const contacts: readonly Contact[]= [...this.contacts.values()];
             subscriber.next(contacts);
             subscriber.complete();
-         }, 3000)
+         }, 1000)
        }
      );
    }

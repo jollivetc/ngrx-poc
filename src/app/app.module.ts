@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { ContactsListComponent } from './contact/contacts-list/contacts-list.component';
 import { ContactComponent } from './contact/contact/contact.component';
 import * as fromState from './contact/state/reducers';
+import { AppEffects } from './contact/state/app.effects';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import * as fromState from './contact/state/reducers';
     StoreModule.forRoot(fromState.reducers),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forFeature([AppEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]
